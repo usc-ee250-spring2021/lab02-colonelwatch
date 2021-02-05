@@ -31,7 +31,7 @@ if __name__ == '__main__':
         distance = grovepi.ultrasonicRead(ultrasonic_port)
 
         if distance < threshold:
-            grove_rgb_lcd.setText_norefresh('%4dcm OBJ PRES\n%d' % (threshold, distance))
+            grove_rgb_lcd.setText_norefresh('%4dcm OBJ PRES\n%4dcm' % (threshold, distance))
         else:
-            grove_rgb_lcd.setText_norefresh('%4dcm         \n%d' % (threshold, distance))
+            grove_rgb_lcd.setText_norefresh('%4dcm         \n%4dcm' % (threshold, distance))
 
